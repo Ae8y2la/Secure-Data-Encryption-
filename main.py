@@ -117,6 +117,7 @@ def decrypt_data(encrypted_text, passkey):
     st.session_state.last_failed_time = current_time
     return None
 
+
 # --- Hacker Animations ---
 def render_hacking_animation():
     theme = COLOR_THEMES[st.session_state.color_theme]
@@ -779,5 +780,32 @@ def main():
         </div>
         """, unsafe_allow_html=True)
 
+        
 if __name__ == "__main__":
     main()
+
+    # Securing line (copyright notice) - Place this at the BOTTOM of your app
+st.markdown(
+    f"""
+    <div style="
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 15px 0;
+        border-bottom: 1px dashed {COLOR_THEMES[st.session_state.color_theme]['PRIMARY']};
+        font-family: 'Courier New', monospace;
+        color: {COLOR_THEMES[st.session_state.color_theme]['TEXT']};
+        letter-spacing: 1px;
+    ">
+        © 2025 Aeyla Naseer. This code is protected under copyright law. Unauthorized copying is prohibited.
+        <span style="color:{COLOR_THEMES[st.session_state.color_theme]['ERROR']}">Ⓧ</span>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Print statement with cyberpunk styling
+print(f"""
+\x1b[38;2;0;240;255m■► \x1b[0m© 2025 Aeyla Naseer. This code is protected under copyright law. Unauthorized copying is prohibited. \x1b[38;2;255;0;60m◄■\x1b[0m
+""")
+
+# ----------------------------------------------------THE-END---------------------------------------------------------------- 
